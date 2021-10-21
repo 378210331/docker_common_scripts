@@ -23,7 +23,7 @@ docker cp verdaccio:/verdaccio/plugins ~/docker/verdaccio/plugins;
 
 #更改权限
 ```shell
-sudo chown 10001:65533 ~/docker/verdaccio
+sudo chown -R 10001:65533 ~/docker/verdaccio
 ```
 
 #镜像构建
