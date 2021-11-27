@@ -43,7 +43,7 @@ nginx
 FROM nginx
 MAINTAINER husiyi
 COPY dist /usr/share/nginx/html
-RUN chmod +x 777 /usr/share/nginx/html
+RUN chmod 777 /usr/share/nginx/html
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
 EXPOSE 80

@@ -9,7 +9,7 @@ docker run -d \
 -e MYSQL_ROOT_PASSWORD=root \
 --name mysql \
 --restart=always \
-mysql:5.7.33 --lower_case_table_names=1
+mysql:5.7.35 --lower_case_table_names=1
 ```
 
 ## 修改最大连接数和大小写不敏感

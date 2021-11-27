@@ -1,11 +1,16 @@
 # elasticsearch
 
 ```shell
+mkdir -p ~/docker/es/{data,plugins}
+chmod 777 -R ~/docker/es
+```
+
+```shell
 docker run  -d \
--p 9200:9200 \
--p 9300:9300 \
--e ES_JAVA_OPTS="-Xms256m -Xmx256m" \
+-e ES_JAVA_OPTS="-Xms512m -Xmx512m" \
 -e discovery.type=single-node \
+-v ~/docker/es/data:/usr/share/elasticsearch/data \
+-v ~/docker/es/plugins:/usr/share/elasticsearch/plugins \
 --name es \
 --restart=always \
 elasticsearch:7.12.0
